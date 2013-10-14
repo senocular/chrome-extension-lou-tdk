@@ -1,0 +1,17 @@
+{
+   "background_page": "background.html",
+   "content_scripts": [ {
+      "include_globs": [ "http://prodgame*.lordofultima.com/*/index.aspx*" ],
+      "js": [ "LoUDefiant_script.js", "chrome_inject.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "description": "Holy cow! This is one defiant extension!",
+   "icons": {
+      "128": "icon128x128.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCddrIuF18aIO4xJZjp33wbXhhK9jnoUzxHNcpbcGpwVEHr1HjxZ3YiHWNVrD6EYRN9B76ORnXnjq6Q0jdu0aW0QOPYDg5EwJkaK4UuqmryU04+zVCEq56RvnTDa2AyfocXwLmtC56bpHNiSjxVdLHbMDF9uCBJUQkIOVZyBv5C8wIDAQAB",
+   "name": "One Defiant Extension",
+   "options_page": "options.html",
+   "update_url": "http://senocular.com/chrome/extensions/lou/LoUDefiant_updates.xml",
+   "version": "0.0.29"
+}

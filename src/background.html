@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function onRequest(request, sender, sendResponse) {
+	switch(request){
+		case "manifest":{
+			sendResponse(getManifest());
+			break;
+		}
+	}
+}
+
+function getManifest() {
+	try {
+		var xhr = new XMLHttpRequest();
+		xhr.open("GET", chrome.extension.getURL("manifest.json"), false);
+		xhr.send(null);
+		return JSON.parse(xhr.responseText);
+	}catch(ignore){}
+	return {};
+}
+
+chrome.extension.onRequest.addListener(onRequest);
+
+</script>
+</head>
+</html>
